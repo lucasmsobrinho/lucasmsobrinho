@@ -5,20 +5,7 @@ import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
-
-// ReactIcons 
-// https://react-icons.github.io/react-icons/icons?name=md
-// Home
-
-// About
-//MdGetApp //Download
-
-// Resume
-//MdAccountBalance //Academic
-
-// Portfolio
-
-// Contact
+// ReactIcons  // https://react-icons.github.io/react-icons/icons?name=md
 
 function App() {
   return (
