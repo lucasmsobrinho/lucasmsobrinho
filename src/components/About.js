@@ -3,9 +3,9 @@ import './About.css';
 
 const About = () => { return(
     <section id="about">
-        <div className="description">
+        <div className="about-description">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed. Et tortor consequat id porta.</p>            
+            <p>I'm passionate about math, technology and design,<br/> specially about computer vision and computer graphics.</p>
         </div>
     </section>
 )}

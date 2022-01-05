@@ -4,16 +4,15 @@ import './Home.css';
 
 const Home = () => { return(
     <section id="home">
-        <h1>My name is Lucas Sobrinho</h1>
+        <h1>I'm Lucas Sobrinho</h1>
         <p className="secondary-text">Software Engineer</p>
-        <ScrollIndicator/ >
+        <ScrollIndicator nextSection="#about" />
     </section>
 )}
 
-// TODO: scroll when click
-const ScrollIndicator = () => { return (
-    <a className="scroll-indicator" href="#about">
-        <FiChevronsDown href="#about"/>
+const ScrollIndicator = (props) => { return (
+    <a className="scroll-indicator" href={props.nextSection}>
+        <FiChevronsDown/>
     </a>
 )}
 

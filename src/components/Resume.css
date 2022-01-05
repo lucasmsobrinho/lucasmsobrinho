@@ -1,15 +1,66 @@
 #resume {
+    margin: auto;
     background-color: #fff;
+    padding-top: 3vmin;
+    padding-bottom: 5vmin;
+    max-width: 1200px;
 }
 
-.resume-description {
+.resume-section {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3vmin;
+}
+
+.resume-id-bar {
+    font-size: 2em;
+    border-right: 1px solid;
+    border-color: #bbb;
+}
+
+.resume-id-bar-title {
+    margin-left: auto;
+    margin-right: 3vmin;
+    max-width:fit-content;
+    border-bottom: .5vmin solid;
+    border-color: #fb8500;
+}
+
+.resume-entries{
+    padding-left: 1vmin;
+    padding-right: 2vmin;
+}
+
+.resume-entry {
+    padding-bottom: 5vmin;
+}
+
+.resume-entry-name {
+    font-size: 2em;
+    margin: auto;
+    max-width: fit-content;
+    color: #023047;
+    color: #ffb703;
+    color: #fb8500;
+    color: #219ebc;
+    
+}
+
+.resume-entry-name:hover {
+    transition:all .5s linear;
+    color: #fb8500;
+}
+
+.resume-entry-role {
+    font-size: 1.5em;
+    margin-bottom: 1.5vmin;
+}
+
+.resume-entry-description {
+    line-height: 1.6;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(5px + 1vmin);
-    margin-left: 20vmin;
-    margin-right: 20vmin;
+    text-align: justify;
+    font-size: calc(10px + 1vmin);
     color: #555;
 }
-
