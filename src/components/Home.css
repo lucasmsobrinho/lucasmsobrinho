@@ -1,0 +1,34 @@
+#home {
+  /*
+  #8ecae6
+  #219ebc
+  #023047
+  #ffb703
+  #fb8500
+  background-image: linear-gradient(to bottom, #023047, #219EBC);
+  */
+  background-color: #023047;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.secondary-text {
+    color: #B2B2B2;
+    font-size: calc(10px + 2vmin);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10vmin;
+    font-size: calc(42px + 2vmin);
+    color: white;
+}
+.scroll-indicator:hover {
+    transition:all .5s linear;
+    color: #ffb703;
+}
