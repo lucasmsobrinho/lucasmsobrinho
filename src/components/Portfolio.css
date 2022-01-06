@@ -1,14 +1,38 @@
 #portfolio {
-    background-color: #282c34;
+    background-color: #181c24;
+    padding-top: 3vmin;
+    padding-bottom: 10vmin;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 1vmin);
-    margin-left: 20vmin;
-    margin-right: 20vmin;
-    color: #fff;
+.projects-container {
+    min-width: 320px;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+    background-color: #fff;
+    padding-bottom: 3vmin;
+    margin-top: 5vmin;
+    margin-right: 2vmin;
+    margin-left: 2vmin;
+}
+
+.project-image-container {
+    min-height: 9em;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.5em;
+}
+
+.card-description {
+    padding: 1.5em;   
 }
