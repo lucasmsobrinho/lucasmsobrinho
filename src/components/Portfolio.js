@@ -3,28 +3,31 @@ import './Portfolio.css';
 
 const projects = [
     { 
-        name: "placeholder project",
-        demoUrl: "https://www.google.com",
-        description: "Just a couple words. C'mon, it's better than Lorem Ipsum right?",
-        image: '/logo192.png'
+        name: "Clicks Dashboard",
+        demoUrl: "https://lucasmsobrinho.github.io/clicks-dashboard",
+        srcUrl: "https://github.com/lucasmsobrinho/clicks-dashboard",
+        backgroundColor: "#A9DBDC",
+        description: "It's a data visualization project. You play a target clicking mini-game, and we generate a real time dashboard with data from your performance.",
+        image: '/project-thumb-clicks-dashboard.jpg',
+        tags: ['data-visualization', 'reactjs']
     }, { 
-        name: "placeholder project 2",
+        name: "Placeholder ",
         demoUrl: "https://www.google.com",
         description: "The most useful infinite improbability generator.",
-        image: '/logo192.png'
+        image: '/logo192.png',
     }, { 
-        name: "placeholder project 3",
+        name: "Coming Soon",
         demoUrl: "https://www.google.com",
         srcUrl: "https://www.github.com",
-        description: "The most useful infinite improbability generator.",
+        description: "Lorem Ipsum.",
         image: '/logo192.png'
-    }, { 
-        name: "placeholder project 4",
+    },  { 
+        name: "Under Construction",
         demoUrl: "https://www.google.com",
         srcUrl: "https://www.github.com",
-        description: "The most useful infinite improbability generator.",
+        description: "...",
         image: '/logo192.png'
-    },
+    }, 
 ]
 
 const Portfolio = () => {
@@ -35,8 +38,8 @@ const Portfolio = () => {
     )
 }
 
-const ProjectsContainer = (props) => {
-    const portfolio = props.items.map( project => {
+const ProjectsContainer = ({items}) => {
+    const portfolio = items.map( project => {
         return <ProjectCard project={project}/>
     })
     return(
@@ -46,28 +49,34 @@ const ProjectsContainer = (props) => {
     )
 }
 
-const ProjectCard = (props) => {
+const ProjectCard = ({project}) => {
     return (
         <div className="project-card">
-            <div className="project-image-container">
-                <a href={props.project.demoUrl}>
-                    <img src={props.project.image}/>
+            <div className="card-title">
+                {project.name}
+            </div>
+            <div className="project-image-container"
+                 style={{
+                     backgroundImage:`url(${project.image})`,
+                     backgroundColor: project.backgroundColor||'black'
+                    }}
+            >
+                <a href={project.demoUrl}>
                 </a>
             </div>
-            <div className="card-title">
-                {props.project.name}
-            </div>
             <div className="card-description">
-                {props.project.description}
+                {project.description}
             </div>
-            <div className="demo">
-                <a href={props.project.demoUrl}>demo</a>
+            <div className="buttons-container">
+                <a className="card-button demo" href={project.demoUrl}>
+                    DEMO
+                </a>
+                {   project.srcUrl ? (
+                    <a className="card-button src" href={project.srcUrl}>
+                        SRC
+                    </a>) : <div/>
+                }
             </div>
-            {   props.project.srcUrl ? (
-                <div className="source-code">
-                    <a href={props.project.srcUrl}>source code</a>
-                </div>) : <div/>
-            }
         </div>
     )
 }

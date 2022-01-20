@@ -1,5 +1,5 @@
 #portfolio {
-    background-color: #181c24;
+    background-color: #1A2027;/* #181c24;*/
     padding-top: 3vmin;
     padding-bottom: 10vmin;
     padding-left: 2em;
@@ -17,22 +17,74 @@
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #121212;
     padding-bottom: 3vmin;
     margin-top: 5vmin;
     margin-right: 2vmin;
     margin-left: 2vmin;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card .buttons-container {
+    position: absolute;
+    width: 100%;
+    bottom: .5em;
+    height: 2em;
 }
 
 .project-image-container {
-    min-height: 9em;
-    width: 100%;
+    min-height: 13em;
+    overflow: hidden;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .card-title {
     font-size: 1.5em;
+    padding: .6em;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
 }
 
 .card-description {
-    padding: 1.5em;   
+    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+}
+
+.buttons-container {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.card-button {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    border: 0px;
+    color: #61dafb;
+    font-size: 1rem;
+
+    text-decoration:none;
+    user-select: none;
+}
+
+.card-button:hover {
+    transition:all .5s linear;
+    color: #fb8500;
 }
