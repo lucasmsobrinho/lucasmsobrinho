@@ -36,35 +36,35 @@ const work = [
 
 const Resume = () => { return(
     <section id="resume">
-        <ResumeSection sectionName="EDUCATION" items={education}/>
+        <div className="section-title" style={{color:"#555"}}><h2>Experiences</h2></div>
         <ResumeSection sectionName="WORK" items={work}/>
+        <ResumeSection sectionName="EDUCATION" items={education}/>
     </section>
 )}
 
-const ResumeSection = (props) => {
-    const entries = props.items.map(entry => {
-        return <ResumeEntry key={entry.name} item={entry}/>
-    });
+const ResumeSection = ({ items, sectionName}) => {
+    const entries = items.map(entry => <ResumeEntry key={entry.name} item={entry}/>);
+
     return(
-    <div className="resume-section">
-        <div className="resume-id-bar">
-            <div className="resume-id-bar-title">{props.sectionName}</div>
+        <div className="resume-section">
+            <div className="resume-id-bar">
+                <div className="resume-id-bar-title">{sectionName}</div>
+            </div>
+            <div className="resume-entries">{entries}</div>
         </div>
-        <div className="resume-entries">{entries}</div>
-    </div>
     )
 }
 
-const ResumeEntry = (props) => { return(
+const ResumeEntry = ({ item }) => { return(
     <div className="resume-entry">
 
-        <a href={props.item.url} target="_blank" rel="noreferrer" style={{"text-decoration": "none"}}>
+        <a href={item.url} target="_blank" rel="noreferrer" style={{"text-decoration": "none"}}>
             <div className="resume-entry-name">
-                    {props.item.name}
+                    {item.name}
             </div>
         </a>
-        <div className="resume-entry-role">{props.item.role} - {props.item.period}</div>
-        <div className="resume-entry-description">{props.item.description}</div>
+        <div className="resume-entry-role">{item.role} - {item.period}</div>
+        <div className="resume-entry-description">{item.description}</div>
     </div>
 )}
 

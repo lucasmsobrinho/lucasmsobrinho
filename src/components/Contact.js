@@ -22,10 +22,9 @@ const Contact = () => {
         </section>
 )}
 
-const MediaButtonContainer = (props) => {
-    const mediaList = props.items.map(media => 
-            <MediaButton item={media}/>
-    );
+const MediaButtonContainer = ({ items }) => {
+    const mediaList = items.map(media => <MediaButton item={media}/>);
+
     return (
         <div className="media-button-container">
             {mediaList}
@@ -33,11 +32,11 @@ const MediaButtonContainer = (props) => {
     )
 }
 
-const MediaButton = (props) => {
+const MediaButton = ({ item }) => {
     return (
-        <a href={props.item.url}>
-            <div className="media-button" id={props.item.name}>
-                {props.item.icon}
+        <a href={item.url}>
+            <div className="media-button" id={item.name}>
+                {item.icon}
             </div>
         </a>
     )
