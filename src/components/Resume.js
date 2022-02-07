@@ -58,7 +58,7 @@ const ResumeSection = ({ items, sectionName}) => {
 const ResumeEntry = ({ item }) => { return(
     <div className="resume-entry">
 
-        <a href={item.url} target="_blank" rel="noreferrer" style={{"text-decoration": "none"}}>
+        <a href={item.url} target="_blank" rel="noreferrer" style={{"textDecoration": "none"}}>
             <div className="resume-entry-name">
                     {item.name}
             </div>

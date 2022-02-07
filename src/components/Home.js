@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {FiChevronsDown} from 'react-icons/fi';
+import ReactGA from 'react-ga';
 import './Home.css';
 
 const Home = () => {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    })
     return(
         <section id="home">
             <h1>I'm Lucas Sobrinho</h1>

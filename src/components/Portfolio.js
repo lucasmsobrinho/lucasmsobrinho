@@ -25,7 +25,7 @@ const Portfolio = () => {
 }
 
 const ProjectsContainer = ({ items }) => {
-    const portfolio = items.map( project => <ProjectCard project={project}/>)
+    const portfolio = items.map( (project, i) => <ProjectCard key={i} project={project}/>)
     return(
         <div className="projects-container">
             {portfolio}

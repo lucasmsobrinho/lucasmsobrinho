@@ -23,7 +23,7 @@ const Contact = () => {
 )}
 
 const MediaButtonContainer = ({ items }) => {
-    const mediaList = items.map(media => <MediaButton item={media}/>);
+    const mediaList = items.map((media, i) => <MediaButton key={i} item={media}/>);
 
     return (
         <div className="media-button-container">
